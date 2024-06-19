@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using CIAbmc.Data;
 
 namespace CIAbmc
 {
@@ -8,10 +10,10 @@ namespace CIAbmc
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
-            string locationOfLibreOfficeSoffice =
-                @"C:\PortableApps\LibreOfficePortable\App\libreoffice\program\soffice.exe";
-
+            builder.Services.AddControllersWithViews(); 
+            builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnection")
+                ));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>PDF</title>
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            background-color: gray;
+            padding: 3%;
+            border-radius: 50px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: bolder;
+            white-space: nowrap;
+        }
+
+        h5 {
+            font-size: large;
+            font-weight: bolder;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        #table1 {
+            border: solid 5px black;
+            background-color: white;
+        }
+
+        #table1 p{
+            margin: 120%;
+        }
+
+        a {
+            color: #0077cc;
+        }
+
+        #QRCode {
+            max-height: 7vh;
+            width: 20%;
+            float: right;
+        }
+        div{
+            text-align:left;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="\Home\ConvertHtml">
+        <table id="table">
+            <tr>
+                <th><h3>Business Model Canvas</h3></th>
+                <th><p>Opracowane dla: <div>##opracowane_dla##</div></p></th>
+                <th><p>Opracowane przez: <div>##opracowane_przez##</div></p></th>
+                <th><p>Data: <div>##data##</div></p></th>
+                <th><p>Wersja:<div>##wersja##</div> </p></th>
+            </tr>
+        </table>
+        <table id="table1">
+            <tr>
+                <th>
+                    <h5>Kluczowi partnerzy </h5>
+                    <p>##kluczowi_partnerzy##</p>
+                </th>
+                <th>
+                    <h5 style="text-align: center;"> Kluczowe aktywności</h5>
+                    <p>##kluczowe_aktywności##</p>
+                </th>
+                <th>
+                    <h5>Propozycja wartości </h5>
+                    <p>##propozycja_wartości##</p>
+                </th>
+                <th>
+                    <h5 style="text-align: center; background-color: white;">
+                        Relacje z klientami
+                    </h5>
+                    <p>##relacja_z_klientami##</p>
+                </th>
+                <th>
+                    <h5>Segmenty klientów </h5>
+                    <p>##segmenty_klientów##</p>
+                </th>
+            </tr>
+            <tr style="text-align: center;">
+                <th>
+                    <h5>Kluczowe zasoby</h5>
+                    <p>##kluczowe_zasoby##</p>
+                </th>
+                <th>
+                    <h5 style="text-align: center;">
+                        Kanały dotarcia
+                    </h5>
+                    <p>##kanaly_dotarcia##</p>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h5> Struktura kosztów </h5>
+                    <p>##struktura_kosztow##</p>
+                </th>
+                <th>
+                    <h5> Strumienie przychodów </h5>
+                    <p>##strumienie_przychodów##</p>
+                </th>
+            </tr>
+        </table>
+        <img id=++QRCode++/>
+    </form>
+</body>
+</html>
