@@ -4,124 +4,74 @@
     <meta charset="utf-8" />
     <title>PDF</title>
     <style>
-        html {
-            font-size: 14px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        @media (min-width: 768px) {
-            html {
-                font-size: 16px;
-            }
-        }
-
-        body {
-            background-color: gray;
-            padding: 3%;
-            border-radius: 50px;
-        }
-
-        p {
-            font-weight: 300;
-        }
-
-        h3 {
-            text-transform: uppercase;
-            font-weight: bolder;
-            white-space: nowrap;
-        }
-
         h5 {
-            font-size: large;
             font-weight: bolder;
             white-space: nowrap;
             text-align: left;
-        }
-
-        #table1 {
-            border: solid 5px black;
-            background-color: white;
-        }
-
-        #table1 p{
-            margin: 120%;
         }
 
         a {
             color: #0077cc;
         }
 
-        #QRCode {
-            max-height: 7vh;
-            width: 20%;
-            float: right;
-        }
-        div{
-            text-align:left;
-            background-color: white;
-        }
     </style>
 </head>
-<body>
+<body style="font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: #d3d3d3;">
     <form method="post" action="\Home\ConvertHtml">
         <table id="table">
             <tr>
-                <th><h3>Business Model Canvas</h3></th>
-                <th><p>Opracowane dla: <div>##opracowane_dla##</div></p></th>
-                <th><p>Opracowane przez: <div>##opracowane_przez##</div></p></th>
-                <th><p>Data: <div>##data##</div></p></th>
-                <th><p>Wersja:<div>##wersja##</div> </p></th>
+                <th><h2>Business Model Canvas</h2></th>
+                <th><h4>Opracowane dla:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##opracowane_dla##</p></th>
+                <th><h4>Opracowane przez:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##opracowane_przez##</p></th>
+                <th><h4>Data:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##data##</p></th>
+                <th><h4>Wersja:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##wersja##</p></th>
             </tr>
         </table>
-        <table id="table1">
+        <table id="table1" style="background-color: white; border: 1px solid black;">
             <tr>
-                <th>
-                    <h5>Kluczowi partnerzy </h5>
-                    <p>##kluczowi_partnerzy##</p>
-                </th>
-                <th>
-                    <h5 style="text-align: center;"> Kluczowe aktywności</h5>
-                    <p>##kluczowe_aktywności##</p>
-                </th>
-                <th>
-                    <h5>Propozycja wartości </h5>
-                    <p>##propozycja_wartości##</p>
-                </th>
-                <th>
-                    <h5 style="text-align: center; background-color: white;">
-                        Relacje z klientami
-                    </h5>
-                    <p>##relacja_z_klientami##</p>
-                </th>
-                <th>
-                    <h5>Segmenty klientów </h5>
-                    <p>##segmenty_klientów##</p>
-                </th>
-            </tr>
-            <tr style="text-align: center;">
-                <th>
-                    <h5>Kluczowe zasoby</h5>
-                    <p>##kluczowe_zasoby##</p>
-                </th>
-                <th>
-                    <h5 style="text-align: center;">
-                        Kanały dotarcia
-                    </h5>
-                    <p>##kanaly_dotarcia##</p>
-                </th>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kluczowi partnerzy </h4>
+                    <p style="white-space: nowrap;">##kluczowi_partnerzy##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;"> Kluczowe aktywności</h4>
+                    <p style="white-space: nowrap;">##kluczowe_aktywności##</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Propozycja wartości </h4>
+                    <p style="white-space: nowrap;">##propozycja_wartości##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; background-color: white; position: absolute; top: 0;">Relacje z klientami</h4>
+                    <p style="white-space: nowrap;">##relacja_z_klientami##</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Segmenty klientów </h4>
+                    <p style="white-space: nowrap;">##segmenty_klientów##</p>
+                </td>
             </tr>
             <tr>
-                <th>
-                    <h5> Struktura kosztów </h5>
-                    <p>##struktura_kosztow##</p>
-                </th>
-                <th>
-                    <h5> Strumienie przychodów </h5>
-                    <p>##strumienie_przychodów##</p>
-                </th>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kluczowe zasoby</h4>
+                    <p style="white-space: nowrap;">##kluczowe_zasoby##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kanały dotarcia</h4>
+                    <p style="white-space: nowrap;">##kanaly_dotarcia##</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid black;">
+                    <h4> Struktura kosztów </h4>
+                    <p style="white-space: nowrap;">##struktura_kosztow##</p>
+                </td>
+                <td colspan="2" style="border: 1px solid black;">
+                    <h4> Strumienie przychodów </h4>
+                    <p style="white-space: nowrap;">##strumienie_przychodów##</p>
+                </td>
             </tr>
         </table>
-        <img id=++QRCode++/>
+        <figure style="position: absolute; right: 0;">++QRCode++</figure>
     </form>
 </body>
 </html>

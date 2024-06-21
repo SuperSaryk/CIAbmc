@@ -43,11 +43,11 @@ namespace CIAbmc.Controllers
         public FileResult ConvertHtml(Szablon model)
         {
             string executableLocation = @"C:\Users\piotr\source\repos\SuperSaryk\CIAbmc\CIAbmc\";
-            string pdfPath = @"C:\Users\piotr\Source\Repos\SuperSaryk\CIAbmc\CIAbmc\wwwroot\html\PDF.pdf";
+            string pdfPath = executableLocation + @"\wwwroot\html\PDF.pdf";
             string pdfName = "PDF.pdf";
-            string indexPath = @"C:\Users\piotr\Source\Repos\SuperSaryk\CIAbmc\CIAbmc\wwwroot\html\PDFTemplate.html";
+            string indexPath = executableLocation + @"\wwwroot\html\PDFTemplate.html";
             string locationOfLibreOfficeSoffice = @"C:\Users\piotr\OneDrive\Pulpit\C#\New folder\LibreOfficePortable\App\libreoffice\program\soffice.exe";
-            string imgPath = "C:\\Users\\piotr\\Source\\Repos\\SuperSaryk\\CIAbmc\\CIAbmc\\wwwroot\\img\\output-onlinepngtools.png";
+            string imgPath = executableLocation + @"\\wwwroot\\img\\outputpdf.png";
 
             var placeholders = new Placeholders();
             placeholders.NewLineTag = "<br/>";
