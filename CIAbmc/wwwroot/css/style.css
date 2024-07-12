@@ -1,6 +1,6 @@
 ﻿html {
     font-size: 14px;
-    font-family: 'Raleway';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -14,38 +14,12 @@
 }
 
 body {
-    display: flex;
-    position: relative;
     min-height: 100%;
     background-color: #808080;
 }
 
 p {
     flex-direction: column;
-}
-
-#szablon {
-    background-color: lightgray;
-    padding: 3%;
-    border-radius: 50px;
-}
-
-.row[name="row1"] {
-    border: none;
-}
-
-    .row[name="row1"] > p {
-        text-align: left;
-    }
-
-#row2 {
-    flex-wrap: wrap;
-    border-right: solid;
-}
-
-#row3 {
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 h2 {
@@ -61,12 +35,6 @@ h5 {
     white-space: nowrap;
     text-align: left;
 }
-
-#table {
-    border: 0.2vw solid black;
-    background-color: white;
-}
-
 
 
 a.navbar-brand {
@@ -116,57 +84,7 @@ button.accept-policy {
     line-height: 60px;
 }
 
-.row, .doubleRow {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-}
-
-    .row > div {
-        border: 1px black solid;
-    }
-
-    .row[name="row2"] > div {
-        height: 50vh;
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .doubleRow > div {
-        height: 50%;
-        width: 111%;
-        display: flex;
-        flex-direction: column;
-    }
-
 input {
     width: 100%;
 }
 
-
-.row[name="row2"] input[type="text"] {
-    height: 90%;
-}
-
-.row[name="row2"] .doubleRow input {
-    height: 60%;
-}
-
-.row[name="row3"] input {
-    height: 50%;
-    width: 98%;
-}
-
-.row[name="row3"] > div {
-    height: 20vh;
-    width: 50%;
-}
-
-img {
-    max-height: 7vh;
-    width: 20%;
-    float: right;
-}

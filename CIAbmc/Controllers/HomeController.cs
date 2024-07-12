@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using DocXToPdfConverter.DocXToPdfHandlers;
 using DocumentFormat.OpenXml.Office2016.Drawing.Command;
+using Aspose.Words;
 
 namespace CIAbmc.Controllers
 {
@@ -24,9 +25,11 @@ namespace CIAbmc.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
+        { 
+            var doc = new Document(@"C:\Users\piotr\source\repos\SuperSaryk\CIAbmc\CIAbmc\wwwroot\html\PDF.pdf");
+            doc.Save(@"C:\Users\piotr\source\repos\SuperSaryk\CIAbmc\CIAbmc\wwwroot\html\Output.html");
 
+            return View();
         }
 
         public ActionResult PDFex()
