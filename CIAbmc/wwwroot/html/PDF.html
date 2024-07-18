@@ -184,7 +184,7 @@
     </style>
 </head>
 <body>
-    <form method="post" action="\Home\ConvertHtml">
+    <form method="post" action="\Home\ConvertHtmlToPDF">
         <div id="szablon">
             <div class="row" name="row1">
                 <h2>Business Model Canvas</h2>
@@ -278,10 +278,11 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" style="width:75px" class="cancel" value="Download" />
+            <input type="submit" style="width:75px" class="cancel" name="action" value="Download" />
+            <!--change to "file" later-->
+            <input type="submit" style="width:75px" class="cancel" name="action" value="Edit" />
             <img src="../img/output-onlinepngtools.png" style="float: right;" />
         </div>
-        <button type="button" class="ConvertPdf" ></button>
     </form>
 </body>
 </html>

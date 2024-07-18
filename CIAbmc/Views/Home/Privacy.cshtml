@@ -14,8 +14,8 @@
         }
 
         body {
-            /* display: flex;
-            position: relative; */
+            display: flex;
+            position: relative;
             min-height: 100%;
             background-color: #808080;
         }
@@ -39,7 +39,7 @@
                 text-align: left;
             }
 
-        table {
+        table{
             background-color: snow;
         }
 
@@ -177,105 +177,62 @@
         }
     </style>
 </head>
-<body>
+<body style="font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: #d3d3d3;">
     <form method="post" action="\Home\ConvertHtml">
-        <div id="szablon">
-            <div class="row" name="row1">
-                <h2>Business Model Canvas</h2>
-                <p>Opracowane dla: <input type="text" name="opracowane_dla"></p>
-                <p>Opracowane przez: <input type="text" name="opracowane_przez"></p>
-                <p>Data: <input type="date" name="data"></p>
-                <p>Wersja: <input type="number" name="wersja"></p>
-            </div>
-            <div id="table">
-                <div class="row" name="row2">
-                    <div>
-                        <h5>
-                            Kluczowi partnerzy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
-                                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
-                            </svg>
-                        </h5>
-                        <input type="text" style="border: 0; word-break: break-all;" name="kluczowi_partnerzy" />
-                    </div>
-                    <div class="doubleRow">
-                        <div>
-                            <h5 style="text-align: center;">
-                                Kluczowe aktywności <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-fill" viewBox="0 0 16 16">
-                                    <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641z" />
-                                </svg>
-                            </h5>
-                            <input type="text" style="border: 0; overflow-wrap: break-word;" name="kluczowe_aktywności" />
-                        </div>
-                        <div>
-                            <h5 style="text-align: center; border-top: solid;">
-                                Kluczowe zasoby <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
-                                    <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
-                                    <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
-                                </svg>
-                            </h5>
-                            <input type="text" style="border: 0; overflow-wrap: break-word;" name="kluczowe_zasoby" />
-                        </div>
-                    </div>
-                    <div>
-                        <h5>
-                            Propozycja wartości <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
-                                <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z" />
-                            </svg>
-                        </h5>
-                        <input type="text" style="border: 0; overflow-wrap: break-word;" name="propozycja_wartości" />
-                    </div>
-                    <div class="doubleRow">
-                        <div>
-                            <h5 style="text-align: center;">
-                                Relacje z klientami<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-                                </svg>
-                            </h5>
-                            <input type="text" style="border: 0; overflow-wrap: break-word;" name="relacja_z_klientami" />
-                        </div>
-                        <div>
-                            <h5 style="text-align: center; border-top: solid;">
-                                Kanały dotarcia <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
-                                </svg>
-                            </h5>
-                            <input type="text" style="border: 0; overflow-wrap: break-word;" name="kanaly_dotarcia" />
-                        </div>
-                    </div>
-                    <div>
-                        <h5>
-                            Segmenty klientów <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
-                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
-                            </svg>
-                        </h5>
-                        <input type="text" style="border: 0; overflow-wrap: break-word;" name="segmenty_klientów" />
-                    </div>
-                </div>
-                <div class="row" name="row3">
-                    <div>
-                        <h5>
-                            Struktura kosztów <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16">
-                                <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
-                                <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
-                            </svg>
-                        </h5>
-                        <input type="text" style="border: 0; overflow-wrap: break-word;" name="struktura_kosztow" />
-                    </div>
-                    <div>
-                        <h5>
-                            Strumienie przychodów <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
-                                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-                                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
-                            </svg>
-                        </h5>
-                        <input type="text" style="border: 0; overflow-wrap: break-word;" name="strumienie_przychodów" />
-                    </div>
-                </div>
-            </div>
-            <input type="submit" style="width:75px" class="cancel" value="Download" />
-            <img src="../img/output-onlinepngtools.png" style="float: right;" />
-        </div>
-        <button type="button" class="ConvertPdf"></button>
+        <table id="table">
+            <tr>
+                <th><h2>Business Model Canvas</h2></th>
+                <th><h4>Opracowane dla:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##opracowane_dla##</p></th>
+                <th><h4>Opracowane przez:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##opracowane_przez##</p></th>
+                <th><h4>Data:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##data##</p></th>
+                <th><h4>Wersja:</h4><p style="background-color: snow; text-align: left; border: 1px solid black; white-space: nowrap;">##wersja##</p></th>
+            </tr>
+        </table>
+        <table id="table1" style="background-color: white; border: 1px solid black;">
+            <tr>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kluczowi partnerzy </h4>
+                    <p style="white-space: nowrap;">##kluczowi_partnerzy##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;"> Kluczowe aktywności</h4>
+                    <p style="white-space: nowrap;">##kluczowe_aktywności##</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Propozycja wartości </h4>
+                    <p style="white-space: nowrap;">##propozycja_wartości##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; background-color: white; position: absolute; top: 0;">Relacje z klientami</h4>
+                    <p style="white-space: nowrap;">##relacja_z_klientami##</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Segmenty klientów </h4>
+                    <p style="white-space: nowrap;">##segmenty_klientów##</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kluczowe zasoby</h4>
+                    <p style="white-space: nowrap;">##kluczowe_zasoby##</p>
+                </td>
+                <td style="border: 1px solid black;">
+                    <h4 style="text-align: center; position: absolute; top: 0;">Kanały dotarcia</h4>
+                    <p style="white-space: nowrap;">##kanaly_dotarcia##</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid black;">
+                    <h4> Struktura kosztów </h4>
+                    <p style="white-space: nowrap;">##struktura_kosztow##</p>
+                </td>
+                <td colspan="2" style="border: 1px solid black;">
+                    <h4> Strumienie przychodów </h4>
+                    <p style="white-space: nowrap;">##strumienie_przychodów##</p>
+                </td>
+            </tr>
+        </table>
+        <figure style="position: absolute; right: 0;">++QRCode++</figure>
     </form>
 </body>
 </html>
